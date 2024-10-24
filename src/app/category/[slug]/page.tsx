@@ -104,7 +104,7 @@ export async function generateStaticParams() {
     `/api/categories?populate=*`
   );
 
-  const slugs = categoriesResponse.data.map((category: any) => ({
+  const slugs = categoriesResponse?.data?.map((category: any) => ({
     slug: category.slug,
   }));
 

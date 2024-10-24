@@ -165,7 +165,7 @@ export async function generateStaticParams({ params }) {
     `/api/products?populate=*&filters[slug][$ne]=${slug}`
   );
 
-  const slugs = productsResponse.data.map((product) => ({
+  const slugs = productsResponse?.data?.map((product) => ({
     slug: product.slug,
   }));
 
